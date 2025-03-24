@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="background.js"></script>
+        <script src="background.js" defer></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="screentime-field">
             <label for="minutes">Screentime:</label>
-            <input type="number" id="screen-minutes" min="0" max="59" value="0" placeholder="mm">
+            <input type="number" class="screentime" id="screen-minutes" min="0" max="59" value="20">
             <label for="seconds">:</label>
-            <input type="number" id="screen-seconds" min="0" max="59" value="0" placeholder="ss">
+            <input type="number" class="screentime" id="screen-seconds" min="0" max="59" value="00">
         </div>
 
         <div id="breaktime-field">
             <label for="minutes">Break time:</label>
-            <input type="number" id="break-minutes" min="0" max="59" value="0" placeholder="mm">
+            <input type="number" id="break-minutes" min="0" max="59" value="00">
             <label for="seconds">:</label>
-            <input type="number" id="break-seconds" min="0" max="59" value="0" placeholder="ss">
+            <input type="number" id="break-seconds" min="0" max="59" value="20">
         </div>
 
         <p> Turn on: </p>
-        <label class="switch">
-            <input type="checkbox">
+        <label class="switch" id="switch">
+            <input type="checkbox" id="checkbox">
             <span class="slider"></span>
         </label>
         <br/>
 
         <div class="countdown">
-            <span id="minutes">00</span>:<span id="seconds">00</span>
+            <span id="clock-minutes">00</span>:<span id="clock-seconds">00</span>
           </div>
     </body>
 </html>
