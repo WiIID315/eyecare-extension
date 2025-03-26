@@ -15,6 +15,8 @@ let alternate = false;
 
 function updateTimer() {
     if(alternate) {
+        if(currentScreen) 
+            alert("Take a break!")
         currentScreen = !currentScreen
         startTime = Date.now();
         alternate = false;
