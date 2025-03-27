@@ -2,6 +2,14 @@
     "manifest_version": 3,
     "name": "Eye Care Multitool",
     "version": "1.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+      "storage",
+      "alarms",
+      "notifications"
+    ],
     "action": {
       "default_icon": "icon.png",
       "default_popup": "window.html"
