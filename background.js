@@ -15,8 +15,12 @@ let alternate = false;
 
 function updateTimer() {
     if(alternate) {
-        if(currentScreen) 
-            alert("Take a break!")
+        if(currentScreen) {
+            alert("Take a break!");
+            let sound = new Audio(chrome.runtime.getURL('audios/audios/mixkit-classic-alarm-995.wav'));
+            sound.play().catch(error => console.error("Audio playback failed:", error));
+        }
+
         currentScreen = !currentScreen
         startTime = Date.now();
         alternate = false;
@@ -61,7 +65,6 @@ breakTimeElements.forEach(function(bt) {
         }
 
         breakTime = (minutes * 60000) + (seconds * 1000);
-        console.log(breakTime);
     });
 })
 
